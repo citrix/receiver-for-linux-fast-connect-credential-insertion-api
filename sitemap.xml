@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>/</loc>
+     <lastmod>2018-06-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/setting-up-your-environment/</loc>
+     <lastmod>2018-06-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/api-functions/</loc>
+     <lastmod>2018-06-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/api-examples/</loc>
+     <lastmod>2018-06-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/credential-comparison-rules/</loc>
+     <lastmod>2018-06-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+</urlset>

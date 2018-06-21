@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>API functions - Fast Connect Credential Insertion API  for Citrix Receiver for Linux 13.10</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/override.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "API functions";
+      var mkdocs_page_input_path = "api-functions.md";
+      var mkdocs_page_url = "/api-functions/";
+
+    </script>
+    
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+
+        <div class="header-top-left">
+          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+<!---
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+             --->
+            </form>
+
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+          </div>
+
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="..">Home</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../setting-up-your-environment/">Setting up your environment</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href="./">API functions</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#api-functions" style="padding:0px;position: relative;">&nbsp;API functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#logonssouser" style="padding:0px;position: relative;">LogonSSOUser</a></li>
+                
+                    <li><a class="toctree-l4" href="#logonssouserwithpin" style="padding:0px;position: relative;">LogonSsoUserWithPin</a></li>
+                
+                    <li><a class="toctree-l4" href="#logoffssouser" style="padding:0px;position: relative;">LogoffSsoUser</a></li>
+                
+                    <li><a class="toctree-l4" href="#errordescription" style="padding:0px;position: relative;">ErrorDescription</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../api-examples/">API examples</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../credential-comparison-rules/">Credential comparison rules</a>
+		
+    </li>
+
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>API functions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <h1 id="api-functions"><a class="toclink" href="#api-functions">API functions</a></h1>
+<p>The Credential Insertion SDK is a C/C++ library that must be consumed by external source code. The module name is libCredInject.so.
+ The Credential Insertion API exposes four functions to enable the use of SSO as follows:</p>
+<ul>
+<li>LogonSSOUser</li>
+<li>LogonSSOUserWithPin</li>
+<li>LogoffSSOUser</li>
+<li>ErrorDescription</li>
+</ul>
+<p>The function is available under the namespace CitrixSSOnSDK.</p>
+<h2 id="logonssouser"><a class="toclink" href="#logonssouser">LogonSSOUser</a></h2>
+<div class="codehilite"><pre><span></span>LOGONSSOUSER_ERROR_CODE LogonSsoUser (const wchar_t *username,
+                                        const wchar_t *domain,
+                                        const wchar_t *password);
+</pre></div>
+
+
+<p>This function is used to provide user credentials to SSO.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>username</td>
+<td>The username</td>
+</tr>
+<tr>
+<td>domain</td>
+<td>The domain</td>
+</tr>
+<tr>
+<td>password</td>
+<td>The password</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Return value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LOGONSSOUSER_OK</td>
+<td>Operation completed</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_INVALID_PARAMETER</td>
+<td>Invalid parameter passed to the function</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_INITIALIZATION_FAILED</td>
+<td>An error occurred initializing the SSO client</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_UNABLE_TO_CONNECT_TO_SSO</td>
+<td>Unable to connect to the SSO service (AM)</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_UNABLE_TO_SEND_REQUEST</td>
+<td>Unable to send the request to the SSO service</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_UNABLE_TO_RECEIVE_RESPONSE</td>
+<td>Unable to receive the response from the SSO service</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_INVALID_REQUEST_TYPE</td>
+<td>Invalid SSO request type</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_CONTAINER_FULL</td>
+<td>The SSO container is full and cannot store more credentials</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_SERVER_INTERNAL_ERROR</td>
+<td>An error has occurred in AM while processing the request</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_SERVER_IPC_ERROR</td>
+<td>An error has occurred during the IPC communication with the server (AM)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="logonssouserwithpin"><a class="toclink" href="#logonssouserwithpin">LogonSsoUserWithPin</a></h2>
+<div class="codehilite"><pre><span></span>LOGONSSOUSER_ERROR_CODE LogonSsoUserWithPin(const wchar_t *pin)
+</pre></div>
+
+
+<p>This function is used to provide smart card user credentials to SSO.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pin</td>
+<td>The smart card PIN</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Return value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LOGONSSOUSER_OK</td>
+<td>Operation completed</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_INVALID_PARAMETER</td>
+<td>Invalid parameter passed to the function</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_INITIALIZATION_FAILED</td>
+<td>An error occurred initializing the SSO client</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_UNABLE_TO_CONNECT_TO_SSO</td>
+<td>Unable to connect to the SSO service (AM)</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_UNABLE_TO_SEND_REQUEST</td>
+<td>Unable to send the request to the SSO service</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_UNABLE_TO_RECEIVE_RESPONSE</td>
+<td>Unable to receive the response from the SSO service</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_INVALID_REQUEST_TYPE</td>
+<td>Invalid SSO request type</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_CONTAINER_FULL</td>
+<td>The SSO container is full and cannot store more credentials</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_SERVER_INTERNAL_ERROR</td>
+<td>An error has occurred in AM while processing the request</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_SERVER_IPC_ERROR</td>
+<td>An error has occurred during the IPC communication with the server (AM)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="logoffssouser"><a class="toclink" href="#logoffssouser">LogoffSsoUser</a></h2>
+<div class="codehilite"><pre><span></span>int LogoffSsoUser()
+</pre></div>
+
+
+<p>This function removes the credentials of the current SSO user and restores the previous user’s credentials if available.</p>
+<table>
+<thead>
+<tr>
+<th>Return value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LOGONSSOUSER_OK</td>
+<td>Operation completed</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_INVALID_PARAMETER</td>
+<td>Invalid parameter passed to the function</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_INITIALIZATION_FAILED</td>
+<td>An error occurred initializing the SSO client</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_UNABLE_TO_CONNECT_TO_SSO</td>
+<td>Unable to connect to the SSO service (AM)</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_UNABLE_TO_SEND_REQUEST</td>
+<td>Unable to send the request to the SSO service</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_UNABLE_TO_RECEIVE_RESPONSE</td>
+<td>Unable to receive the response from the SSO service</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_INVALID_REQUEST_TYPE</td>
+<td>Invalid SSO request type</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_UNAUTHORIZED</td>
+<td>Trying to remove a set of credentials that was stored in SSO by AM itself</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_SERVER_INTERNAL_ERROR</td>
+<td>An error has occurred in AM while processing the request</td>
+</tr>
+<tr>
+<td>LOGONSSOUSER_SERVER_IPC_ERROR</td>
+<td>An error has occurred during the IPC communication with the server (AM)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="errordescription"><a class="toclink" href="#errordescription">ErrorDescription</a></h2>
+<div class="codehilite"><pre><span></span>const wchar_t *ErrorDescription(LOGONSSOUSER_ERROR_CODE errorCode)
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errorCode</td>
+<td>The error code to get the description of</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Return value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The error description</td>
+<td>The error description string, or an “Unknown error” message if the error code is unknown</td>
+</tr>
+</tbody>
+</table> 
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../setting-up-your-environment/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../api-examples/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+    <footer class="site-footer">
+      <div class="wrapper">
+          <p align="right">© 1999-2018 Citrix Systems, Inc. All rights reserved. | <a href="http://www.citrix.com/about/legal/legal-notice.html">Terms of Use | <a href="#" onclick="event.preventDefault(); window.evidon.notice.showConsentTool();">Cookie Preferences</a></a></p>
+      </div>
+  </footer>
+  <script type="text/javascript">
+      (function (id) {
+          function append(scriptid, url, async) {
+              var d = document, sn = 'script', f = d.getElementsByTagName(sn)[0];
+              if (!f) f = d.head;
+              var s = d.createElement(sn);
+              s.async = true;
+              s.id = scriptid;
+              s.src = url;
+              f.parentNode.insertBefore(s, f);
+          }
+  
+          function getRootDomain() {
+              var parts = window.location.hostname.split('.');
+              if (parts.length === 2) rootDomain = parts[0];
+              else if (parts.length > 2) {
+                // see if the next to last value is a common tld
+                var part = parts[parts.length - 2];
+                if (part === 'com' || part === 'co') {
+                  rootDomain = parts[parts.length - 3]; // go back one more
+                }
+                else {
+                  rootDomain = part;
+                }
+              }
+  
+            return rootDomain;
+          }
+  
+          window.evidon = {};
+          window.evidon.id = id;
+          var cdn = '//c.evidon.com/', rootDomain = getRootDomain(), noticecdn = cdn + 'sitenotice/';
+          append('evidon-notice', noticecdn + 'evidon-sitenotice-tag.js', false);
+          append('evidon-location', cdn + 'geo/country.js', true);
+          append('evidon-themes', noticecdn + id + '/snthemes.js', true);
+          if (rootDomain) append('evidon-settings', noticecdn + id + '/' + rootDomain + '/settings.js', true);
+  
+          window.evidon.priorConsentCallback = function () {
+              // add the tags which need to wait for prior consent
+              // here.  This should be all your advertising tags and
+              // probably most of your social and tracking tags.
+          }
+      })(3010);
+  </script>
+  </body>
+
+</html>

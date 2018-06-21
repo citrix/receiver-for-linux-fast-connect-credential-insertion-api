@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>API examples - Fast Connect Credential Insertion API  for Citrix Receiver for Linux 13.10</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/override.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "API examples";
+      var mkdocs_page_input_path = "api-examples.md";
+      var mkdocs_page_url = "/api-examples/";
+
+    </script>
+    
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+
+        <div class="header-top-left">
+          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+<!---
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+             --->
+            </form>
+
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+          </div>
+
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="..">Home</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../setting-up-your-environment/">Setting up your environment</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../api-functions/">API functions</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href="./">API examples</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#api-examples" style="padding:0px;position: relative;">&nbsp;API examples</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-1-log-on-a-user" style="padding:0px;position: relative;">Example 1: Log on a user</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-2-log-on-a-user-with-a-smart-card" style="padding:0px;position: relative;">Example 2: Log on a user with a smart card</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-3-log-off-a-user" style="padding:0px;position: relative;">Example 3: Log off a user</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-4-managing-an-exclusive-endpoint" style="padding:0px;position: relative;">Example 4: Managing an exclusive endpoint</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-5-managing-user-restore-and-shared-endpoints" style="padding:0px;position: relative;">Example 5: Managing user restore and shared endpoints</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../credential-comparison-rules/">Credential comparison rules</a>
+		
+    </li>
+
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>API examples</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <h1 id="api-examples"><a class="toclink" href="#api-examples">API examples</a></h1>
+<p>The following are simple examples that show how to consume the Fast Connect API.</p>
+<h2 id="example-1-log-on-a-user"><a class="toclink" href="#example-1-log-on-a-user">Example 1: Log on a user</a></h2>
+<p>The following code provides user credentials to SSO to log on a user.</p>
+<div class="codehilite"><pre><span></span><span class="nt">bool</span> <span class="nt">DoLogonSsoUser</span><span class="o">(</span><span class="nt">const</span> <span class="nt">std</span><span class="p">::</span><span class="nd">wstring</span> <span class="o">&amp;</span><span class="nt">username</span><span class="o">,</span>
+                    <span class="nt">const</span> <span class="nt">std</span><span class="p">::</span><span class="nd">wstring</span> <span class="o">&amp;</span><span class="nt">domain</span><span class="o">,</span>
+                    <span class="nt">const</span> <span class="nt">std</span><span class="p">::</span><span class="nd">wstring</span> <span class="o">&amp;</span><span class="nt">password</span><span class="o">)</span>
+<span class="p">{</span>
+    <span class="err">if</span> <span class="err">(username.empty()</span>
+            <span class="err">||</span> <span class="err">password.empty()</span>
+            <span class="err">||</span> <span class="err">domain.empty())</span>
+    <span class="err">{</span>
+        <span class="err">//</span> <span class="err">Credentials</span> <span class="err">unavailable</span> <span class="err">or</span> <span class="err">incomplete.</span>
+        <span class="err">return</span> <span class="err">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="nt">Credentials</span> <span class="nt">are</span> <span class="nt">available</span><span class="o">,</span> <span class="nt">inject</span> <span class="nt">them</span> <span class="nt">to</span> <span class="nt">SSO</span><span class="o">.</span>
+    <span class="nt">CitrixSSOnSDK</span><span class="p">::</span><span class="nd">LOGONSSOUSER_ERROR_CODE</span> <span class="nt">result</span> <span class="o">=</span>
+        <span class="nt">CitrixSSOnSDK</span><span class="p">::</span><span class="nd">LogonSsoUser</span><span class="o">(</span><span class="nt">username</span><span class="p">.</span><span class="nc">c_str</span><span class="o">(),</span>
+                                    <span class="nt">domain</span><span class="p">.</span><span class="nc">c_str</span><span class="o">(),</span>
+                                    <span class="nt">password</span><span class="p">.</span><span class="nc">c_str</span><span class="o">());</span>
+
+    <span class="o">//</span> <span class="nt">Check</span> <span class="nt">whether</span> <span class="nt">the</span> <span class="nt">credential</span> <span class="nt">injection</span> <span class="nt">was</span> <span class="nt">successful</span><span class="o">.</span>
+    <span class="nt">if</span> <span class="o">(</span><span class="nt">result</span> <span class="o">!=</span> <span class="nt">CitrixSSOnSDK</span><span class="p">::</span><span class="nd">LOGONSSOUSER_OK</span><span class="o">)</span>    <span class="p">{</span>
+        <span class="err">//</span> <span class="err">Get</span> <span class="err">the</span> <span class="err">result</span> <span class="err">description.</span>
+        <span class="err">const</span> <span class="err">wchar_t</span> <span class="err">*result_description</span> <span class="err">=</span> <span class="n">CitrixSSOnSDK</span><span class="p">:</span><span class="o">:</span><span class="nf">ErrorDescription</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+
+        <span class="err">//</span> <span class="err">Report</span> <span class="err">the</span> <span class="err">error.</span>
+        <span class="err">wprintf(L&quot;LogonSsoUser()</span> <span class="n">failed</span><span class="p">:</span> <span class="o">%</span><span class="n">d</span> <span class="o">%</span><span class="n">ls</span><span class="err">\</span><span class="n">n</span><span class="err">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">result_description</span><span class="p">);</span>
+
+        <span class="err">return</span> <span class="err">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="nt">Success</span><span class="o">.</span>
+    <span class="nt">return</span> <span class="nt">true</span><span class="o">;</span>
+<span class="err">}</span>
+</pre></div>
+
+
+<h2 id="example-2-log-on-a-user-with-a-smart-card"><a class="toclink" href="#example-2-log-on-a-user-with-a-smart-card">Example 2: Log on a user with a smart card</a></h2>
+<p>The following code provides user credentials to SSO to log on a user with a smart card.</p>
+<div class="codehilite"><pre><span></span><span class="nt">bool</span> <span class="nt">DoLogonSsoUserWithPin</span><span class="o">(</span><span class="nt">const</span> <span class="nt">std</span><span class="p">::</span><span class="nd">wstring</span> <span class="o">&amp;</span><span class="nt">pin</span><span class="o">)</span>
+<span class="p">{</span>
+    <span class="err">if</span> <span class="err">(pin.empty())</span>
+    <span class="err">{</span>
+        <span class="err">//</span> <span class="err">PIN</span> <span class="err">unavailable.</span>
+        <span class="err">return</span> <span class="err">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="nt">PIN</span> <span class="nt">is</span> <span class="nt">available</span><span class="o">,</span> <span class="nt">inject</span> <span class="nt">it</span> <span class="nt">to</span> <span class="nt">SSO</span><span class="o">.</span>
+    <span class="nt">CitrixSSOnSDK</span><span class="p">::</span><span class="nd">LOGONSSOUSER_ERROR_CODE</span> <span class="nt">result</span> <span class="o">=</span>
+        <span class="nt">CitrixSSOnSDK</span><span class="p">::</span><span class="nd">LogonSsoUserWithPin</span><span class="o">(</span><span class="nt">pin</span><span class="p">.</span><span class="nc">c_str</span><span class="o">());</span>
+
+    <span class="o">//</span> <span class="nt">Check</span> <span class="nt">whether</span> <span class="nt">the</span> <span class="nt">PIN</span> <span class="nt">injection</span> <span class="nt">was</span> <span class="nt">successful</span><span class="o">.</span>
+    <span class="nt">if</span> <span class="o">(</span><span class="nt">result</span> <span class="o">!=</span> <span class="nt">CitrixSSOnSDK</span><span class="p">::</span><span class="nd">LOGONSSOUSER_OK</span><span class="o">)</span>
+    <span class="p">{</span>
+        <span class="err">//</span> <span class="err">Get</span> <span class="err">the</span> <span class="err">result</span> <span class="err">description.</span>
+        <span class="err">const</span> <span class="err">wchar_t</span> <span class="err">*result_description</span> <span class="err">=</span> <span class="n">CitrixSSOnSDK</span><span class="p">:</span><span class="o">:</span><span class="nf">ErrorDescription</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+
+        <span class="err">//</span> <span class="err">Report</span> <span class="err">the</span> <span class="err">error.</span>
+        <span class="err">wprintf(L&quot;LogonSsoUserWithPin()</span> <span class="n">failed</span><span class="p">:</span> <span class="o">%</span><span class="n">d</span> <span class="o">%</span><span class="n">ls</span><span class="err">\</span><span class="n">n</span><span class="err">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">result_description</span><span class="p">);</span>
+
+        <span class="err">return</span> <span class="err">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="nt">Success</span><span class="o">.</span>
+    <span class="nt">return</span> <span class="nt">true</span><span class="o">;</span>
+<span class="err">}</span>
+</pre></div>
+
+
+<h2 id="example-3-log-off-a-user"><a class="toclink" href="#example-3-log-off-a-user">Example 3: Log off a user</a></h2>
+<p>This function performs a logoff from a SSO perspective, removing the user’s credentials from the system for the purpose of future SSO-based authorization. Existing authorized sessions can still be used. If the previous user was not logged off, that user’s credentials are restored (see example 4).</p>
+<div class="codehilite"><pre><span></span>void DoLogoffSsoUser()
+{
+    if (CitrixSSOnSDK::LogoffSsoUser() == LOGONSSOUSER_OK)
+        printf(&quot;\nUser logged off\n&quot;);
+    else
+        printf(&quot;\nError logging off user\n&quot;);
+}
+</pre></div>
+
+
+<h2 id="example-4-managing-an-exclusive-endpoint"><a class="toclink" href="#example-4-managing-an-exclusive-endpoint">Example 4: Managing an exclusive endpoint</a></h2>
+<p>If the current user is not logged off and a new user is logged on, the previous user’s credentials are saved by the system to be restored when the current user logs off. Only a single level of restore is supported. Logging off a second time without an intervening logon results in clearing the SSO credentials and requires authentication before launching new sessions. This supports the following scenario using Controller, which is a custom application using CredInject:</p>
+<ol>
+<li>A kiosk is auto-logged on with a default/generic user (Controller calls LogonSsoUser())</li>
+<li>The kiosk is then available with generic credentials for customer use.</li>
+<li>Sales Rep A logs on with his own credentials:<ol>
+<li>Controller calls LogonSsoUser().</li>
+<li>Controller disconnects generic user’s sessions.</li>
+<li>Controller roams existing sessions for Sales Rep A.</li>
+</ol>
+</li>
+<li>The kiosk can launch new sessions using Sales Rep A’s credentials.</li>
+<li>Sales Rep A logs off:<ol>
+<li>Controller calls LogoffSsoUser(), removing Sales Rep A’s credentials and restoring the generic user.</li>
+<li>Controller restores generic user’s sessions.</li>
+</ol>
+</li>
+<li>The kiosk is back to its initial state and is available for use with generic credentials.</li>
+<li>Sales Rep B logs on (repeat Steps 3-5 for Sales Rep B).</li>
+<li>The kiosk is back to its initial state.</li>
+</ol>
+<p>This scenario can be repeated infinitely.</p>
+<h2 id="example-5-managing-user-restore-and-shared-endpoints"><a class="toclink" href="#example-5-managing-user-restore-and-shared-endpoints">Example 5: Managing user restore and shared endpoints</a></h2>
+<p>If the current user is not logged off and a new user is logged on, the previous user’s credentials are saved by the system to be restored when the current user logs off. Only a single level of restore is supported. Logging off a second time without an intervening logon results in clearing the SSO credentials and requires authentication before launching new sessions. This supports the following scenario using Controller, which is a custom application using CredInject:</p>
+<ol>
+<li>A nurse logs on normally and launches sessions. (Controller calls LogonSsoUser()).</li>
+<li>A doctor “taps in”:<ol>
+<li>Controller executes LogonSsoUser() with the doctor’s credentials.</li>
+<li>Controller does not log off the nurse or disconnect sessions.</li>
+<li>Controller causes any existing doctor’s sessions to be roamed to this endpoint.</li>
+</ol>
+</li>
+<li>At this point both the nurse’s and the doctor’s sessions are active. New sessions will be launched using the doctor’s credentials.</li>
+<li>The doctor “taps out”:<ol>
+<li>Controller calls LogoffSsoUser(), removing the doctor’s credentials and restoring the nurse’s.</li>
+<li>Controller disconnects the doctor’s sessions.</li>
+<li>The nurse’s sessions are still active.</li>
+</ol>
+</li>
+<li>The nurse resumes as at Step 1.</li>
+</ol> 
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../api-functions/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../credential-comparison-rules/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+    <footer class="site-footer">
+      <div class="wrapper">
+          <p align="right">© 1999-2018 Citrix Systems, Inc. All rights reserved. | <a href="http://www.citrix.com/about/legal/legal-notice.html">Terms of Use | <a href="#" onclick="event.preventDefault(); window.evidon.notice.showConsentTool();">Cookie Preferences</a></a></p>
+      </div>
+  </footer>
+  <script type="text/javascript">
+      (function (id) {
+          function append(scriptid, url, async) {
+              var d = document, sn = 'script', f = d.getElementsByTagName(sn)[0];
+              if (!f) f = d.head;
+              var s = d.createElement(sn);
+              s.async = true;
+              s.id = scriptid;
+              s.src = url;
+              f.parentNode.insertBefore(s, f);
+          }
+  
+          function getRootDomain() {
+              var parts = window.location.hostname.split('.');
+              if (parts.length === 2) rootDomain = parts[0];
+              else if (parts.length > 2) {
+                // see if the next to last value is a common tld
+                var part = parts[parts.length - 2];
+                if (part === 'com' || part === 'co') {
+                  rootDomain = parts[parts.length - 3]; // go back one more
+                }
+                else {
+                  rootDomain = part;
+                }
+              }
+  
+            return rootDomain;
+          }
+  
+          window.evidon = {};
+          window.evidon.id = id;
+          var cdn = '//c.evidon.com/', rootDomain = getRootDomain(), noticecdn = cdn + 'sitenotice/';
+          append('evidon-notice', noticecdn + 'evidon-sitenotice-tag.js', false);
+          append('evidon-location', cdn + 'geo/country.js', true);
+          append('evidon-themes', noticecdn + id + '/snthemes.js', true);
+          if (rootDomain) append('evidon-settings', noticecdn + id + '/' + rootDomain + '/settings.js', true);
+  
+          window.evidon.priorConsentCallback = function () {
+              // add the tags which need to wait for prior consent
+              // here.  This should be all your advertising tags and
+              // probably most of your social and tracking tags.
+          }
+      })(3010);
+  </script>
+  </body>
+
+</html>

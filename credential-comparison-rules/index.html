@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Credential comparison rules - Fast Connect Credential Insertion API  for Citrix Receiver for Linux 13.10</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="../css/highlight.css">
+    <link rel="stylesheet" href="../css/override.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "Credential comparison rules";
+      var mkdocs_page_input_path = "credential-comparison-rules.md";
+      var mkdocs_page_url = "/credential-comparison-rules/";
+
+    </script>
+    
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+
+        <div class="header-top-left">
+          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+<!---
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+             --->
+            </form>
+
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+          </div>
+
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="..">Home</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../setting-up-your-environment/">Setting up your environment</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../api-functions/">API functions</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../api-examples/">API examples</a>
+		
+    </li>
+
+			  
+              
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href="./">Credential comparison rules</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#credential-comparison-rules" style="padding:0px;position: relative;">&nbsp;Credential comparison rules</a></li>
+                
+                    <li><a class="toctree-l4" href="#domain-credentials-examples" style="padding:0px;position: relative;">Domain credentials examples</a></li>
+                
+                    <li><a class="toctree-l4" href="#smart-card-credential-examples" style="padding:0px;position: relative;">Smart card credential examples</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Credential comparison rules</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <h1 id="credential-comparison-rules"><a class="toclink" href="#credential-comparison-rules">Credential comparison rules</a></h1>
+<p>After a set of credentials is inserted, the SSO implementation in AM allows for a second set of credentials to be inserted on top of the first one, provided that the second credentials are different. That means that at most two separate sets of credentials can be stored at the same time (that is, only a single level of restore is supported). The credentials are cached in SSO in a stack fashion, with only the topmost set of credentials accessible for authentication.</p>
+<p>When inserting a set of credentials into SSO, it is compared to those already available in the container (if any).
+ If the comparison is positive, the new credentials are ignored and not cached.
+ If the comparison is negative, the new credentials are stored on top of the currently stored credentials (if the second slot is available).</p>
+<p>The rule enforced to compare domain credentials is as follows: Two sets of domain credentials are considered matching if username and domain are equal (the password is ignored in the comparison).</p>
+<p>The rule enforced to compare smart card credentials is as follows: PINs never match (they are always considered different because they might be associated with different smart cards).</p>
+<h2 id="domain-credentials-examples"><a class="toclink" href="#domain-credentials-examples">Domain credentials examples</a></h2>
+<ul>
+<li><code>usernameA/domainA/passwordA == usernameA/domainA/passwordA</code> <br>Credentials match: all three fields match.</li>
+<li><code>usernameA/domainA/passwordA != usernameB/domainA/passwordA</code> <br>Credentials do not match: the username is different.</li>
+<li><code>usernameA/domainA/passwordA != usernameA/domainB/passwordA</code> <br>Credentials do not match: the domain is different.</li>
+<li><code>usernameA/domainA/passwordA == usernameA/domainA/passwordB</code> <br>Credentials match: only the password is different.</li>
+</ul>
+<h2 id="smart-card-credential-examples"><a class="toclink" href="#smart-card-credential-examples">Smart card credential examples</a></h2>
+<ul>
+<li><code>PIN 1234 != PIN 5678</code> <br>PINs are different.</li>
+<li><code>PIN 1234 != PIN 1234</code> <br>PINs are considered different even if they are actually identical.</li>
+</ul> 
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../api-examples/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+    <footer class="site-footer">
+      <div class="wrapper">
+          <p align="right">© 1999-2018 Citrix Systems, Inc. All rights reserved. | <a href="http://www.citrix.com/about/legal/legal-notice.html">Terms of Use | <a href="#" onclick="event.preventDefault(); window.evidon.notice.showConsentTool();">Cookie Preferences</a></a></p>
+      </div>
+  </footer>
+  <script type="text/javascript">
+      (function (id) {
+          function append(scriptid, url, async) {
+              var d = document, sn = 'script', f = d.getElementsByTagName(sn)[0];
+              if (!f) f = d.head;
+              var s = d.createElement(sn);
+              s.async = true;
+              s.id = scriptid;
+              s.src = url;
+              f.parentNode.insertBefore(s, f);
+          }
+  
+          function getRootDomain() {
+              var parts = window.location.hostname.split('.');
+              if (parts.length === 2) rootDomain = parts[0];
+              else if (parts.length > 2) {
+                // see if the next to last value is a common tld
+                var part = parts[parts.length - 2];
+                if (part === 'com' || part === 'co') {
+                  rootDomain = parts[parts.length - 3]; // go back one more
+                }
+                else {
+                  rootDomain = part;
+                }
+              }
+  
+            return rootDomain;
+          }
+  
+          window.evidon = {};
+          window.evidon.id = id;
+          var cdn = '//c.evidon.com/', rootDomain = getRootDomain(), noticecdn = cdn + 'sitenotice/';
+          append('evidon-notice', noticecdn + 'evidon-sitenotice-tag.js', false);
+          append('evidon-location', cdn + 'geo/country.js', true);
+          append('evidon-themes', noticecdn + id + '/snthemes.js', true);
+          if (rootDomain) append('evidon-settings', noticecdn + id + '/' + rootDomain + '/settings.js', true);
+  
+          window.evidon.priorConsentCallback = function () {
+              // add the tags which need to wait for prior consent
+              // here.  This should be all your advertising tags and
+              // probably most of your social and tracking tags.
+          }
+      })(3010);
+  </script>
+  </body>
+
+</html>
