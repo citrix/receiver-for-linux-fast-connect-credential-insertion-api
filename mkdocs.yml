@@ -1,0 +1,15 @@
+site_name: Fast Connect Credential Insertion API  for Citrix Receiver for Linux 13.10
+site_description: Fast Connect Credential Insertion API  for Citrix Receiver for Linux 13.10
+theme_dir: citrix-sdk
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+     anchorlink: True
+pages:
+
+- Home: index.md
+- Setting up your environment: setting-up-your-environment.md
+- API functions: api-functions.md
+- API examples: api-examples.md
+- Credential comparison rules: credential-comparison-rules.md
