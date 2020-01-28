@@ -1,6 +1,7 @@
 site_name: Fast Connect Credential Insertion API for Citrix Receiver for Linux 13.10
 site_description: Fast Connect Credential Insertion API for Citrix Receiver for Linux 13.10
 site_title: Developer Docs
+site_url: https://developer-docs.citrix.com
 
 # Copyright
 copyright: 'Copyright &copy; 1999-2019 Citrix Systems, Inc. All rights reserved. '
@@ -61,3 +62,4 @@ nav:
 - API functions: api-functions.md
 - API examples: api-examples.md
 - Credential comparison rules: credential-comparison-rules.md
+- Questions?: https://discussions.citrix.com/forum/1385-citrix-developer-exchange/
